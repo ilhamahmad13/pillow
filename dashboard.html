@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+
+    <!-- Bootstrap Icons CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title>Hello, world!</title>
+    <style>
+      /* Additional styling for responsive adjustments */
+      .background-atas {
+        position: relative;
+      }
+
+      .background-atas img {
+        width: 100%;
+        height: 100%;
+        max-height: 850px;
+        object-fit: cover;
+        border-bottom-right-radius: 100px;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-bottom-right-radius: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+      }
+
+      .overlay h1 {
+        color: white;
+        font-size: clamp(2.5rem, 5vw, 70pt);
+        margin-bottom: 10px;
+      }
+
+      .overlay p {
+        color: white;
+        font-size: clamp(1rem, 2.5vw, 20pt);
+        max-width: 80%;
+        margin-bottom: 30px;
+      }
+
+      .overlay .btn {
+        background-color: red;
+        color: white;
+        padding: 15px 50px;
+        align-self: flex-start;
+      }
+
+      .overlay .btn:hover {
+        background-color: rgb(197, 6, 6);
+      }
+
+      .commitment,
+      .layanan {
+        position: relative;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .commitment p,
+      .layanan .card-text {
+        font-size: 15pt;
+        color: rgb(113, 112, 112);
+      }
+
+      .commitment .btn,
+      .layanan .btn {
+        background-color: red;
+        color: white;
+        padding: 15px 50px;
+        margin: 0 auto;
+        display: inline-block;
+      }
+
+      .commitment .btn:hover,
+      .layanan .btn:hover {
+        background-color: rgb(197, 6, 6);
+      }
+
+      .card-custom {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+      }
+
+      .icon-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f1f3f5;
+        margin: 0 auto 15px;
+      }
+
+      .icon-circle i {
+        font-size: 24px;
+        color: #3b82f6;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #000;
+        color: #fff;
+        padding: 50px 0;
+        margin-top: 70px;
+      }
+
+      footer .row {
+        margin-bottom: 30px;
+      }
+
+      footer .col-md-3 h5 {
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      footer .list-unstyled a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      footer .list-unstyled a:hover {
+        text-decoration: underline;
+      }
+
+      /* Custom Responsive */
+      @media (max-width: 768px) {
+        .navbar-brand,
+        .navbar-nav {
+          text-align: center;
+          width: 100%;
+        }
+
+        .background-atas img {
+          max-height: 500px;
+        }
+
+        .commitment,
+        .layanan {
+          padding-top: 50px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="margin-left: 50px" href="#"
+          >Pillow Creative</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                style="margin-right: 50px; color: black"
+                >Layanan Kami</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Background Section -->
+    <div class="background-atas">
+      <img src="bg.jpg" alt="Background Image" class="img-fluid" />
+      <div class="overlay">
+        <h1>A Better Place <br />To Design</h1>
+        <p>
+          Pillow Creative adalah digital agensi yang menawarkan jasa desain
+          kreatif untuk kebutuhan bisnis anda.
+        </p>
+        <button type="button" class="btn">Learn More</button>
+      </div>
+    </div>
+
+    <!-- Commitment Section -->
+    <div class="commitment">
+      <p>
+        Kami berkomitmen dan berdedikasi tinggi untuk memberikan pelayanan
+        terbaik bagi setiap pelanggan <br />
+        serta memberikan kontribusi signifikan untuk kemajuan bisnis anda.
+      </p>
+      <button type="button" class="btn">About Us</button>
+    </div>
+
+    <!-- Layanan Section -->
+    <div class="layanan">
+      <h3>Layanan kami</h3>
+      <div class="container my-5">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card card-custom">
+              <div class="icon-circle">
+                <i class="bi bi-file-earmark-ppt"></i>
+              </div>
+              <p class="card-text">Template untuk seminar proposal anda</p>
+              <button type="button" class="btn">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-custom">
+              <div class="icon-circle">
+                <i class="bi bi-file-earmark-ppt"></i>
+              </div>
+              <p class="card-text">Template untuk seminar hasil anda</p>
+              <button type="button" class="btn">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-custom">
+              <div class="icon-circle">
+                <i class="bi bi-file-earmark-ppt"></i>
+              </div>
+              <p class="card-text">Custom Power Point sekarang juga</p>
+              <button type="button" class="btn">Pesan Sekarang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <!-- Logo and Description -->
+          <div class="col-md-3">
+            <img src="logo.png" alt="Logo" class="img-fluid" />
+            <h5>Pillow Creative Id</h5>
+            <p>
+              Kreatif desainer yang memberikan layanan terbaik untuk kebutuhan
+              anda.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+
+          <!-- Important Links -->
+          <div class="col-md-3">
+            <h5>Important Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="col-md-3">
+            <h5>Social Media</h5>
+            <a href="#" style="color: #fff; margin-right: 10px"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" style="color: #fff; margin-right: 10px"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" style="color: #fff; margin-right: 10px"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" style="color: #fff"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-4"
+        style="
+          border-top: 1px solid #333;
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        ">
+        <p class="ms-5 text-center text-md-start" style="margin-left: 100px">
+          &copy; 2024 Pillow Creative Id
+        </p>
+        <p class="me-5 text-center text-md-end" style="margin-right: 100px">
+          Powered by PT Pillow Digital Agency
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS & Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz4fnFO9gybD6Wv9V3NfEX4Bp0p5Xj6LsAhaT5l5sC8Nsmptu4fg3j4hsw"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-pzjw8f+ua7Kw1TIq0v8Fqj-18FVvA5f+2qDka9ntq5q6nt2LZVQ9H6QHeeBlR8fI"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
